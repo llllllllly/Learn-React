@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>一个简单的点赞功能</title>
+</head>
+<body>
+    <div class="wrapper">
+        <button class="like-btn">
+            <span class="like-text">点赞</span>
+            <span>👍</span>
+        </button>
+    </div>
+    <script>
+        const button = document.querySelector('.like-btn')
+        const buttonText = button.querySelector('.like-text')
+        let isLike = false
+        button.addEventListener('click', () => {
+            isLike = !isLike
+            if (isLike) {
+                buttonText.innerHTML = '取消'
+            } else {
+                buttonText.innerHTML = '点赞'
+            }
+        }, false)
+    </script>
+</body>
+</html>
