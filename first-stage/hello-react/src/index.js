@@ -17,6 +17,7 @@ const users = [
 class User extends Component {
     render () {
         const { user } = this.props
+        console.log(this.props.num)
         return (
             <div>
                 <div>姓名：{user.username}</div>
@@ -32,7 +33,7 @@ class Index extends Component {
     render () {
         return (
             <div>
-                {users.map((user, i) => <User key={i} user={user} />)}
+                {users.map((user, i) => <User key={i} num={i} user={user} />)}
             </div>
         )
     }
