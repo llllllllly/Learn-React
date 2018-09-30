@@ -12,3 +12,4 @@ ReactDOM.render(
     <CommentApp />,
     document.getElementById('root')
 )
+
