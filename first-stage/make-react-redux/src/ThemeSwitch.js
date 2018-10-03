@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { connect } from './Connect'
 
 class ThemeSwitch extends Component {
     static contextTypes = {
@@ -49,5 +50,13 @@ class ThemeSwitch extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        themeColor: state.themeColor
+    }
+}
+
+ThemeSwitch = connect(mapStateToProps)(ThemeSwitch)
 
 export default ThemeSwitch
